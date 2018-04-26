@@ -10,7 +10,7 @@ read h
 
 a=0
 b=0
-if [ $modulo -eq 0 ]
+if [ $modulo -eq 1 ]
 then
 	while [ $a -lt $h ]
 	do
@@ -40,7 +40,7 @@ then
 			done
 			
 			b=0
-			while [ $b -lt $spaceTwice ]
+			while [ $b -lt $space ]
 			do
 				echo -n " "
 				((b=b+1))
@@ -68,7 +68,7 @@ then
 			done
 			
 			b=0
-			while [ $b -lt $spaceTwice ]
+			while [ $b -lt $space ]
 			do
 				echo -n " "
 				((b=b+1))
@@ -97,7 +97,7 @@ else
 
 	while [ $a -lt $h ]
 	do
-		if [ $a -eq $hLessPlus]
+		if [ $a -eq $hLessPlus ]
 		then
 			b=0
 			while [ $b -lt $space ]
@@ -121,7 +121,7 @@ else
 			done
 			((a=a+1))
 			echo
-		elif [ $a -gt $hLessPlus]
+		elif [ $a -gt $hLessPlus ]
 		then
 			((space=space+1))
 			((spaceTwice=space*2))
