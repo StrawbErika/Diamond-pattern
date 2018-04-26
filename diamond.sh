@@ -9,57 +9,37 @@ read h
 a=0
 b=0
 
-# potato=100
-# if [ $potato -lt 50 ]
-# then
-# 	echo "Tooo smooll"
-# else
-# 	echo "Potato layf"
-# fi
-
-
-# age=20
-# if [ $age -lt 18 ]
-# then
-# 	echo "Minor"
-# elif [ $age -ge 18 ]
-# then
-# 	echo "Major"
-# fi
-
-# x=0
-# while [ $x -lt ${#array[*]} ]
-# do
-# 	echo ${array[x]}
-#     x=`expr $x + 1`
-# done
-
 while [ $a -lt $h ]
 do
-	echo $a
+	echo -n $a
 	if [ $a -gt $half ]
 	then
 		((space=space+1))
 		((spaceTwice=space*2))
-		((stars=h-spaceTwice))
+		((stars=h-spaceTwice))	
+
+		echo -n "Greater Stars:"
+		echo -n $stars
+		echo -n "Greater Space:"
+		echo -n $space
 
 		while [ $b -lt $space ]
 		do
-			echo " "
+			echo -n " "
 			((b=b+1))
 		done
 
 		b=0
 		while [ $b -lt $stars ]
 		do
-			echo "*"
+			echo -n "*"
 			((b=b+1))
 		done
 		
 		b=0
 		while [ $b -lt $space ]
 		do
-			echo " "
+			echo -n " "
 			((b=b+1))
 		done
 		
@@ -67,23 +47,28 @@ do
 		((a=a+1))
 		echo
 	else
+		echo -n "Stars:"
+		echo -n $stars
+		echo -n "Space:"
+		echo -n $space
+
 		while [ $b -lt $space ]
 		do
-			echo " "
+			echo -n " "
 			((b=b+1))
 		done
 
 		b=0
 		while [ $b -lt $stars ]
 		do
-			echo "*"
+			echo -n "*"
 			((b=b+1))
 		done
 		
 		b=0
 		while [ $b -lt $space ]
 		do
-			echo " "
+			echo -n " "
 			((b=b+1))
 		done
 		
