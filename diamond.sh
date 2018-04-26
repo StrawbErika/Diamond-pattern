@@ -1,68 +1,104 @@
 # !/bin/bash
 read h
-space=`expr $h / 2`
-halfPlus1=`expr $h / 2 + 1`
-space2=`expr $space * 2`
-stars=`expr $h - $space2`
+
+((space=h/2))
+((half=h/2))
+((spaceTwice=space * 2))
+((stars=h - spaceTwice))
+
 a=0
 b=0
+
+# potato=100
+# if [ $potato -lt 50 ]
+# then
+# 	echo "Tooo smooll"
+# else
+# 	echo "Potato layf"
+# fi
+
+
+# age=20
+# if [ $age -lt 18 ]
+# then
+# 	echo "Minor"
+# elif [ $age -ge 18 ]
+# then
+# 	echo "Major"
+# fi
+
+# x=0
+# while [ $x -lt ${#array[*]} ]
+# do
+# 	echo ${array[x]}
+#     x=`expr $x + 1`
+# done
+
 while [ $a -lt $h ]
 do
-	if [ $a -eq $halfPlus1 ]
-		space=`expr $space + 1`
-		space2=`expr $space * 2`
-		stars=`expr $h - $space2`
+	echo $a
+	if [ $a -gt $half ]
+	then
+		((space=space+1))
+		((spaceTwice=space*2))
+		((stars=h-spaceTwice))
 
-		echo "\n"
 		while [ $b -lt $space ]
 		do
 			echo " "
-			b=`expr $b + 1`
+			((b=b+1))
 		done
+
 		b=0
 		while [ $b -lt $stars ]
 		do
 			echo "*"
-			b=`expr $b + 1`
+			((b=b+1))
 		done
+		
 		b=0
 		while [ $b -lt $space ]
 		do
 			echo " "
-			b=`expr $b + 1`
+			((b=b+1))
 		done
+		
 		b=0
-		a=`expr $a + 1`
-
-	then
+		((a=a+1))
+		echo
 	else
 		while [ $b -lt $space ]
 		do
 			echo " "
-			b=`expr $b + 1`
+			((b=b+1))
 		done
+
 		b=0
 		while [ $b -lt $stars ]
 		do
 			echo "*"
-			b=`expr $b + 1`
+			((b=b+1))
 		done
+		
 		b=0
 		while [ $b -lt $space ]
 		do
 			echo " "
-			b=`expr $b + 1`
+			((b=b+1))
 		done
+		
+		zero=0
 		b=0
-		if [ $space -neq 0]
+		if [ $space -gt $zero ]
 		then
-			space=`expr $space - 1`
-			space2=`expr $space * 2`
-			stars=`expr $h - $space2`
-			echo "\n"
+			((space=space+1))
+			((spaceTwice=space*2))
+			((stars=h-spaceTwice))
+			echo
 		else
 			space=0
+			echo
 		fi
-		a=`expr $a + 1`
+		((a=a+1))
 	fi
 done
