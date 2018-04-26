@@ -5,21 +5,21 @@ public class Main {
     public static void main(String[] args) {
         // String in = System.console().readLine();
         // int h = String.toInteger(in);
-        int h = 3;
+        int h = 6;
         int space = h /2;
         int space2 = space * 2;
         int stars = h - space2;
 
         if(h%2 == 1){
             for(int a = 0; a < h; a++){
-                System.out.print(a);
+                // System.out.print(a);
                 if(a > (h/2)){
                     space ++;
                     space2 = space * 2;
                     stars = h - space2;
 
-                    System.out.print("Greater Stars: " + stars);
-                    System.out.print("Greater Space: " + space);
+                    // System.out.print("Greater Stars: " + stars);
+                    // System.out.print("Greater Space: " + space);
                     for(int b = 0; b < space; b++){
                         System.out.print(" ");
                     }
@@ -32,8 +32,8 @@ public class Main {
                     System.out.println("");
                 }
                 else{
-                    System.out.print("Stars: " + stars);
-                    System.out.print("Space: " + space);
+                    // System.out.print("Stars: " + stars);
+                    // System.out.print("Space: " + space);
                     for(int b = 0; b < space; b++){
                         System.out.print(" ");
                     }
